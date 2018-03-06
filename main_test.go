@@ -1,19 +1,25 @@
 package main
+
 import (
 	"testing"
 )
 
-
-
 func BenchmarkInsertionSort(b *testing.B) {
-	a2 := []int{2,1,3,6,4,5,8,7,10,9}
-		for n := 0; n < b.N; n++ {
-			InsertionSort(a2)
-		}
+	a2 := []int{2, 1, 3, 6, 4, 5, 8, 7, 10, 9}
+	for n := 0; n < b.N; n++ {
+		InsertionSort(a2)
+	}
+}
+
+func BenchmarkMyQuickSort(b *testing.B) {
+	a2 := []int{2, 1, 3, 6, 4, 5, 8, 7, 10, 9}
+	for n := 0; n < b.N; n++ {
+		MyQuickSort(a2)
+	}
 }
 
 func BenchmarkStandardSort(b *testing.B) {
-	a2 := []int{2,1,3,6,4,5,8,7,10,9}
+	a2 := []int{2, 1, 3, 6, 4, 5, 8, 7, 10, 9}
 	for n := 0; n < b.N; n++ {
 		StandardSort(a2)
 	}
