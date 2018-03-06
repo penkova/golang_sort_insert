@@ -6,27 +6,26 @@ import (
 )
 
 func main() {
-	fmt.Println("hello")
+	//a := []int{2,1,3,6,4,5,8,7,10,9}
+	Hello()
+	//InsertionSort(a)
 }
 func Hello(){
 	fmt.Println("hello")
 }
 
-func InsertionSort(arr []int) {
-	//left to right
-	for i := 0; i < len(arr); i++ {
-		key := arr[i]
-		tmp := i
-		//right to left
-		for j := i - 1; j > -1; j-- {
-			if arr[j] < key {
-				break
+func InsertionSort(slc []int) {
+	for i, key := range slc{
+		preIndx := i-1// храним индекс предыдущего элемента
+			// пока индекс(preIndx) != 0 и значение предыдущего элемента массива больше текущего
+			if preIndx >= 0 && slc[preIndx]>key{
+				//перестановка элементов
+				slc[preIndx + 1] = slc[preIndx]
+				slc[preIndx] = key
+				preIndx--
 			}
-			arr[j+1] = arr[j]
-			tmp = j
-		}
-		arr[tmp] = key
 	}
+	//fmt.Println(slc)
 }
 
 func StandardSort(arr []int) {
