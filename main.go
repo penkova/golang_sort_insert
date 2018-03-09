@@ -69,8 +69,6 @@ func myQuickSort(slc []int, left, right int) {
 //			preIndx--
 //		}
 //	}
-//	fmt.Println(slc)
-//	return
 //}
 
 func InsertionSort(slc []int) {
@@ -80,7 +78,6 @@ func InsertionSort(slc []int) {
 				slc[j+1] = slc[j]
 				j = j- 1
 			}
-
 			slc[j+1] = key
 	}
 }
