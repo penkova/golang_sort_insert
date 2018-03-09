@@ -60,17 +60,6 @@ func myQuickSort(slc []int, left, right int) {
 	return
 }
 
-//func InsertionSort(slc []int) {
-//	for i, key := range slc {
-//		preIndx := i -1 // храним индекс предыдущего элемента
-//		// пока индекс(preIndx) != 0 и значение предыдущего элемента массива больше текущего
-//		if preIndx >= 0 && slc[preIndx] > key {
-//			slc[preIndx],slc[preIndx+1] = slc[preIndx+1],slc[preIndx]
-//			preIndx--
-//		}
-//	}
-//}
-
 func InsertionSort(slc []int) {
 	for i, key := range slc{
 			j := i - 1
